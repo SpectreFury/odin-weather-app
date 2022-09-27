@@ -67,7 +67,7 @@ nav .input-group input {
   top: 20px;
   left: 20px;
   transform: translate(-50%, -50%);
-  animation: rotateImg 60s linear infinite;
+  animation: rotateImg 240s linear infinite;
 }
 
 .card .city {
@@ -87,8 +87,12 @@ nav .input-group input {
   color: #fff;
 }
 
-.card .temperature-container {
+.card .card-inner {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   background: url("https://media2.giphy.com/media/DD4FroTT30PeSamZbG/giphy.gif?cid=52b5febdgmh568ihn4gnu3yazifhlqei4xd0mm39m3ohhqi5&rid=giphy.gif&ct=g");
   width: 50%;
   height: 50%;
@@ -98,7 +102,7 @@ nav .input-group input {
   margin-top: 40px;
 }
 
-.card .temperature-container::after {
+.card .card-inner::after {
   content: "";
   position: absolute;
   top: 0;
@@ -110,16 +114,30 @@ nav .input-group input {
   z-index: -1;
 }
 
-.card .temperature-container h1 {
-  margin-top: 50px;
-  font-size: 5rem;
-  margin-left: 80px;
+.card .card-inner h2 {
+  font-weight: 500;
+  font-size: 1.5rem;
 }
 
-.card .temperature-container h2 {
-  font-weight: 500;
+.card-inner .time-display {
+  font-weight: 700;
   font-size: 2rem;
-  margin-left: 80px;
+  text-align: center;
+}
+
+.current-temperature {
+  display: flex;
+}
+
+.current-temperature h1 {
+  font-weight: 700;
+  font-size: 5rem;
+}
+
+.current-temperature h5 {
+  position: relative;
+  font-size: 2.5rem;
+  top: 15px;
 }
 
 @keyframes rotateImg {
