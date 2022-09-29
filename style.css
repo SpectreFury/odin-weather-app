@@ -14,6 +14,7 @@ body {
 }
 
 nav {
+  position: relative;
   width: 100%;
   height: 100px;
   display: flex;
@@ -178,6 +179,30 @@ footer {
   font-weight: 500;
   color: grey;
   letter-spacing: 1px;
+}
+
+.modal-error {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 400px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #151515;
+  transform: translateY(-100%);
+  transition: all 0.2s ease;
+}
+
+.modal-error.show {
+  transform: translateY(0);
+}
+
+.modal-error p {
+  color: red;
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 
 @keyframes rotateImg {
